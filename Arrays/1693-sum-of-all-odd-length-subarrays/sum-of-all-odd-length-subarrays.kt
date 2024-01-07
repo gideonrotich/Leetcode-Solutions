@@ -1,16 +1,12 @@
 class Solution {
     fun sumOddLengthSubarrays(arr: IntArray): Int {
-         var count = 0
-
-        for (start in arr.indices) {
-            for (end in start until arr.size step 2) {
-                for (i in start..end) {
-                    count += arr[i]
-                }
-            }
-        }
-
-        return count
+         var oddSum = 0
+    
+    for (i in 1..arr.size step 2) {
+        oddSum += arr.toList().windowed(i).map { it.sum() }.sum()
+    }
+    
+    return oddSum
 
 
     }
