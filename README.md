@@ -1,4 +1,4 @@
-# Leetcode-Solutions
+# Kotlin Leetcode-Solutions
 Collection of LeetCode questions to ace the coding interview!
 ### Overview
 - [Data Structures](https://github.com/abdurakhmonoff/data-structures-and-algorithms-kotlin/tree/master/src/data_structures)
