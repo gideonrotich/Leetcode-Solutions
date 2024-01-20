@@ -22,15 +22,15 @@ class Solution {
             }
         }
 
+        //alternative 2
         val figure = map.values.toIntArray()
-
-        // for(i in 0 until figure.size -1){
-        //     result += figure[i] * figure[i+1]
-        // }
-
-        for((current,next) in map.values.zipWithNext()){
-            result += current * next
+        for(i in 0 until figure.size -1){
+            result += figure[i] * figure[i+1]
         }
+
+        // for((current,next) in map.values.zipWithNext()){
+        //     result += current * next
+        // }
 
         return result
     }
