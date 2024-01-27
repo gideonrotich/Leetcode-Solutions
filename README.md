@@ -255,5 +255,3 @@ or equal to those of the children and the lowest key is in the root node
 #### Theta Θ Notation
 * *Theta Notation* is used to provide a bound on a particular algorithm such that it can be "sandwiched" between
   two constants (one for an upper limit and one for a lower limit) for sufficiently large values
-
-![Alt text](/images/theta.png?raw=true "Theta Notation")
