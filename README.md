@@ -1,31 +1,4 @@
 # Kotlin Leetcode-Solutions
-Collection of LeetCode questions to ace the coding interview!
-### Overview
-- [Data Structures](https://github.com/abdurakhmonoff/data-structures-and-algorithms-kotlin/tree/master/src/data_structures)
-    - Arrays
-    - Hash Tables
-    - Linked Lists
-    - Stacks
-    - Queues
-    - Trees
-    - Graphs
-- [Algorithms](https://github.com/abdurakhmonoff/data-structures-and-algorithms-kotlin/tree/master/src/algorithms)
-    - Recursion
-    - Sorting
-        - Bubble Sort
-        - Selection Sort
-        - Insertion Sort
-        - Merge Sort
-        - Quick Sort
-    - Searching
-        - Linear Search
-        - Binary Search
-        - BFS
-        - DFS
-- [Dynamic Programming](https://github.com/abdurakhmonoff/data-structures-and-algorithms-kotlin/tree/master/src/dynamic_programming)
-    - Memoization
-
-## Data Structures
 ### Linked List
  * A *Linked List* is a linear collection of data elements, called nodes, each
    pointing to the next node by means of a pointer. It is a data structure
@@ -80,15 +53,12 @@ Collection of LeetCode questions to ace the coding interview!
    * Insert: `O(log(n))`
    * Remove: `O(log(n))`
 
-<img src="/images/BST.png?raw=true" alt="Binary Search Tree" width="400" height="500">
-
 ### Trie
 * A trie, sometimes called a radix or prefix tree, is a kind of search tree that is used to store a dynamic set or associative
   array where the keys are usually Strings. No node in the tree stores the key associated with that node; instead, its position 
   in the tree defines the key with which it is associated. All the descendants of a node have a common prefix of the String associated 
   with that node, and the root is associated with the empty String.
 
-![Alt text](/images/trie.png?raw=true "Trie")
 
 ### Fenwick Tree
 * A Fenwick tree, sometimes called a binary indexed tree, is a tree in concept, but in practice is implemented as an implicit data
@@ -100,16 +70,12 @@ Collection of LeetCode questions to ace the coding interview!
   * Range Sum: `O(log(n))`
   * Update: `O(log(n))`
 
-![Alt text](/images/fenwickTree.png?raw=true "Fenwick Tree")
-
 ### Segment Tree
 * A Segment tree, is a tree data structure for storing intervals, or segments. It allows querying which of the stored segments contain
   a given point
 * Time Complexity:
   * Range Query: `O(log(n))`
   * Update: `O(log(n))`
-
-![Alt text](/images/segmentTree.png?raw=true "Segment Tree")
 
 ### Heap
 * A *Heap* is a specialized tree based structure data structure that satisfies the *heap* property: if A is a parent node of
@@ -121,8 +87,6 @@ or equal to those of the children and the lowest key is in the root node
   * Access Max / Min: `O(1)`
   * Insert: `O(log(n))`
   * Remove Max / Min: `O(log(n))`
-
-<img src="/images/heap.png?raw=true" alt="Max Heap" width="400" height="500">
 
 
 ### Hashing
@@ -137,9 +101,6 @@ or equal to those of the children and the lowest key is in the root node
  hashed-to-slot and proceeding in some sequence, until an unoccupied slot is found. The name open addressing refers to
  the fact that the location of an item is not always determined by its hash value
 
-
-![Alt text](/images/hash.png?raw=true "Hashing")
-
 ### Graph
 * A *Graph* is an ordered pair of G = (V, E) comprising a set V of vertices or nodes together with a set E of edges or arcs,
   which are 2-element subsets of V (i.e. an edge is associated with two vertices, and that association takes the form of the
@@ -148,9 +109,6 @@ or equal to those of the children and the lowest key is in the root node
  v (u -> v), then it is also the case that there exists an edge from node v to node u (v -> u)
  * **Directed Graph**: a graph in which the adjacency relation is not symmetric. So if there exists an edge from node u to node v
  (u -> v), this does *not* imply that there exists an edge from node v to node u (v -> u)
-
-
-<img src="/images/graph.png?raw=true" alt="Graph" width="400" height="500">
 
 ## Algorithms
 
@@ -163,8 +121,6 @@ or equal to those of the children and the lowest key is in the root node
   * Worst Case: `O(n^2)`
   * Average Case: `O(nlog(n))`
 
-![Alt text](/images/quicksort.gif?raw=true "Quicksort")
-
 #### Mergesort
 * *Mergesort* is also a divide and conquer algorithm. It continuously divides an array into two halves, recurses on both the
   left subarray and right subarray and then merges the two sorted halves
@@ -174,7 +130,6 @@ or equal to those of the children and the lowest key is in the root node
   * Worst Case: `O(nlog(n))`
   * Average Case: `O(nlog(n))`
 
-![Alt text](/images/mergesort.gif?raw=true "Mergesort")
 
 #### Bucket Sort
 * *Bucket Sort* is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket
@@ -183,8 +138,6 @@ or equal to those of the children and the lowest key is in the root node
   * Best Case: `Ω(n + k)`
   * Worst Case: `O(n^2)`
   * Average Case:`Θ(n + k)`
-
-![Alt text](/images/bucketsort.png?raw=true "Bucket Sort")
 
 #### Radix Sort
 * *Radix Sort* is a sorting algorithm that like bucket sort, distributes elements of an array into a number of buckets. However, radix
@@ -200,14 +153,11 @@ or equal to those of the children and the lowest key is in the root node
 * *Depth First Search* is a graph traversal algorithm which explores as far as possible along each branch before backtracking
 * Time Complexity: `O(|V| + |E|)`
 
-![Alt text](/images/dfsbfs.gif?raw=true "DFS / BFS Traversal")
-
 #### Breadth First Search
 * *Breadth First Search* is a graph traversal algorithm which explores the neighbor nodes first, before moving to the next
   level neighbors
 * Time Complexity: `O(|V| + |E|)`
 
-![Alt text](/images/dfsbfs.gif?raw=true "DFS / BFS Traversal")
 
 #### Topological Sort
 * *Topological Sort* is the linear ordering of a directed graph's nodes such that for every edge from node u to node v, u
@@ -218,7 +168,6 @@ or equal to those of the children and the lowest key is in the root node
 * *Dijkstra's Algorithm* is an algorithm for finding the shortest path between nodes in a graph
 * Time Complexity: `O(|V|^2)`
 
-![Alt text](/images/dijkstra.gif?raw=true "Dijkstra's")
 
 #### Bellman-Ford Algorithm
 * *Bellman-Ford Algorithm* is an algorithm that computes the shortest paths from a single source node to all other nodes in a weighted graph
@@ -227,8 +176,6 @@ or equal to those of the children and the lowest key is in the root node
 * Time Complexity:
   * Best Case: `O(|E|)`
   * Worst Case: `O(|V||E|)`
-
-![Alt text](/images/bellman-ford.gif?raw=true "Bellman-Ford")
 
 #### Floyd-Warshall Algorithm
 * *Floyd-Warshall Algorithm* is an algorithm for finding the shortest paths in a weighted graph with positive or negative edge weights, but
@@ -244,14 +191,10 @@ or equal to those of the children and the lowest key is in the root node
   subset of edges that forms a tree that includes every node in the graph
 * Time Complexity: `O(|V|^2)`
 
-![Alt text](/images/prim.gif?raw=true "Prim's Algorithm")
-
 #### Kruskal's Algorithm
 * *Kruskal's Algorithm* is also a greedy algorithm that finds a minimum spanning tree in a graph. However, in Kruskal's, the graph does not
   have to be connected
 * Time Complexity: `O(|E|log|V|)`
-
-![Alt text](/images/kruskal.gif?raw=true "Kruskal's Algorithm")
 
 ## Greedy Algorithms
 * *Greedy Algorithms* are algorithms that make locally optimal choices at each step in the hope of eventually reaching the globally optimal solution
@@ -299,16 +242,12 @@ or equal to those of the children and the lowest key is in the root node
 #### Big O Notation
 * *Big O Notation* is used to describe the upper bound of a particular algorithm. Big O is used to describe worst case scenarios
 
-![Alt text](/images/bigO.png?raw=true "Theta Notation")
-
 #### Little O Notation
 * *Little O Notation* is also used to describe an upper bound of a particular algorithm; however, Little O provides a bound
   that is not asymptotically tight
 
 #### Big Ω Omega Notation
 * *Big Omega Notation* is used to provide an asymptotic lower bound on a particular algorithm
-
-![Alt text](/images/bigOmega.png?raw=true "Theta Notation")
 
 #### Little ω Omega Notation
 * *Little Omega Notation* is used to provide a lower bound on a particular algorithm that is not asymptotically tight
