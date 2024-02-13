@@ -1,23 +1,29 @@
 class Solution {
     fun findRelativeRanks(score: IntArray): Array<String> {
-        val map = HashMap<Int,String>()
-        val list = mutableListOf<String>()
+      // Create a max heap to store scores along with their indices
+        val maxHeap = PriorityQueue<Pair<Int, Int>>(compareBy { -it.first })
 
-        val array = score.sortedDescending()
+        // Populate the max heap with scores and their indices
+        for (i in score.indices) {
+            maxHeap.offer(score[i] to i)
+        }
 
-        for(i in array.indices){
-            map[array[i]] = when (i) {
-                 0 -> "Gold Medal"
-                 1 -> "Silver Medal"
-                 2 -> "Bronze Medal"
-                 else -> (i+1).toString()
+        // Create an array to store the ranks
+        val result = Array(score.size) { "" }
+
+        // Assign ranks based on heap ordering
+        var rank = 1
+        while (maxHeap.isNotEmpty()) {
+            val (currScore, index) = maxHeap.poll()
+            result[index] = when (rank) {
+                1 -> "Gold Medal"
+                2 -> "Silver Medal"
+                3 -> "Bronze Medal"
+                else -> rank.toString()
             }
+            rank++
         }
 
-        for(i in score.indices){
-            list.add(map[score[i]]!!)
-        }
-
-        return list.toTypedArray()
+        return result
     }
 }
